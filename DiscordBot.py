@@ -20,7 +20,7 @@ voice_channel = None
 song_list = []
 
 #creating the bot istance
-DiscordBot = commands.Bot(command_prefix="!")
+DiscordBot = commands.Bot(command_prefix="$")
 
 #generating the token
 TOKEN = 'YOUR TOKEN HERE'
