@@ -72,12 +72,8 @@ async def offence(ctx, *, name):
     """<name>: Make the bot offence someone."""
     offences = ["You suck shit", "Go fuck a pokemon", "You nab scum", "Unfeathered mostruosity"
                 "Suck my fart", "GIT GUD", "Your mom asshole is bigger than your mom pussy", "YOU FUCKER",
-                "You love enjoying the taste of warm donkey seed", "You love watching gay dog porn don't you",
-                "Suck my ball and say they are bon-bon", "Donkey ass nigga", "Banana sucker", "Jerker nab",
-                "shove your grandma's panties down your own throat YOU SICK FUCK", "shut you fucking face uncle fucker",
-                "stop sucking on your mom's clit perv", "FAMM NU BUCCHIN OMM E LOOOOT"
-
-        ]
+                "You love watching gay dog porn don't you", "Donkey ass", "Banana sucker", "Jerker nab",
+                "shove your grandma's panties", "shut you fucking mouth" ]
     x = randint(0, len(offences))
 
     try:
