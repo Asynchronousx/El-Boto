@@ -4,10 +4,13 @@ import urllib.request
 import urllib.parse
 import asyncio
 import re
-import youtube_dl
-from googlesearch import search
+
 from random import randint
 from discord.ext import commands
+
+#External dependencies
+import youtube_dl
+from googlesearch import search
 
 #global variables: discord bot
 voice = None
