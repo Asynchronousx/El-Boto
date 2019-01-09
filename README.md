@@ -2,29 +2,29 @@
 ## Description
 This simple discord bot will help and aid in basic features like:
 
- - MUSIC
+ - MUSIC<br>
    Play and search songs from youtube.<br>
-   Song's queue management (adding songs while one's currently playing will add to the queue)
-   Skip song functionality: bored of the songs played by other? $skip it.
-   Queue status for checking which song it's actually queued.
-   Stop function to make the player stop playing. (whoa)
-   Volume adjust function to adjust the volume (too high for you, newbie?)
+   Song's queue management (adding songs while one's currently playing will add to the queue)<br>
+   Skip song functionality: bored of the songs played by other? $skip it.<br>
+   Queue status for checking which song it's actually queued.<br>
+   Stop function to make the player stop playing. (whoa)<br>
+   Volume adjust function to adjust the volume (too high for you, newbie?)<br>
 
- - SEARCHING
-   Why open a browser when you comfortably do this on your discord channel?
-   Searching features include(TEXT PAGE by default):
-   Searching page by name (returns: most-top occurrence)
-   Searching a video, returning the most-top occurrence of that video on youtube.
+ - SEARCHING<br>
+   Why open a browser when you comfortably do this on your discord channel?<br>
+   Searching features include(TEXT PAGE by default):<br>
+   Searching page by name (returns: most-top occurrence)<br>
+   Searching a video, returning the most-top occurrence of that video on youtube.<br>
 
- - FUN
-   I know that you like to make fun of your friends. That's why is fun to offence!
-   Offend people with the command $offence, and take a laugh.
+ - FUN<br>
+   I know that you like to make fun of your friends. That's why is fun to offence!<br>
+   Offend people with the command $offence, and take a laugh.<br>
 
- - UTILITY
-   Dice roll isn't only on World of Warcraft.
-   Win dispute with your friend launching your dice!
-   (features include 0-6 dice to 0-99999999999999999999 dice)
-   Test Bot: well, you want to check if your bot is alive, don't you?
+ - UTILITY<br>
+   Dice roll isn't only on World of Warcraft.<br>
+   Win dispute with your friend launching your dice!<br>
+   (features include 0-6 dice to 0-99999999999999999999 dice)<br>
+   Test Bot: well, you want to check if your bot is alive, don't you?<br>
     
- - MORE TO COME!
+ - MORE TO COME!<br>
 
