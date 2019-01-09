@@ -14,7 +14,7 @@ the bot work properly.<br>
 
 This simple discord bot will help and aid in basic features like:
 
- - BOT BASICS
+ - BOT BASICS<br>
    Join: simple as it seems: make the bot join the channel. -> $join<br>
    Leave: you won't believe: make the bot leave the channel. -> $leave<br>
 
