@@ -46,11 +46,20 @@ If you'd like to compile ant test it locally, you'll need this the following dep
  -**Python 3.6.7**
 
  ### Internal Dependencies:
- -**discord.py lib**
- -**youtube_dl lib**
- -**google - specifically googlesearch- lib**
+ -**discord.py lib**<br>
+ -**youtube_dl lib**<br>
+ -**google - specifically googlesearch- lib**<br>
  
  ### External Dependencies
- -**PyNaCL**
- -**FFMPEG/AVCONV to make the bot translate and play youtube audio into the channel**
+ -**PyNaCL**<br>
+ -**FFMPEG/AVCONV to make the bot translate and play youtube audio into the channel**<br>
+ 
+ ## Installation
+ 
+ For installing and running this bot in local, make sure to have all the dependencies listed there, and then download
+ the DiscordBot.py.<br>
+ Once done, type 
+ ```bash
+ python DiscordBot.py 
+ ```
  
