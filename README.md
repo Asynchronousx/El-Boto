@@ -1,11 +1,10 @@
 # Discord-Bot: a fun, useful utility to Discord.
 ## Description
-This Discord Bot is hosted on Heroku via real time cloud to make the bot run 24/7.
-In this repo there are the configuration file and environ necessary to Heroku to let 
-the bot work properly.
+This Discord Bot is hosted on Heroku via real time cloud to make the bot run 24/7.<br>
+This repo there contains the configuration file and environ necessary to Heroku to let<br> 
+the bot work properly.<br>
 
 This simple discord bot will help and aid in basic features like:
-
 
  - MUSIC<br>
    Play and search songs from youtube<br>
@@ -39,3 +38,9 @@ Commands help? type **$help** into Discord to show the commands table.<br>
 Also, typing **$help 'command name'** will show more about a command.
 
 ## Dependencies 
+
+This bot requires internal and external dependencies in order to work.<br>
+If you'd like to compile ant test it locally, you'll need this the following dependencies:
+
+ ### Runtime enviroinment: 
+ **Python 3.6.7**
