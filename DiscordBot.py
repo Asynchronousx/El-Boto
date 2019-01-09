@@ -114,7 +114,8 @@ async def printroles(ctx):
     server = ctx.message.server
     counter = 1
     for role in server.roles:
-        await DiscordBot.say("`{}. {}` :hammer_pick:".format(counter, roles))
+        await DiscordBot.say("`{}. {}` :hammer_pick:".format(counter, role.name))
+        counter += 1
    
 #end of display role
     
