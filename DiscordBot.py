@@ -69,9 +69,9 @@ async def test(ctx, *, message):
 async def offence(ctx, *, name):
     """<name>: Make the bot offence someone."""
     offences = ["You suck shit", "Go fuck a pokemon", "You nab scum", "Unfeathered mostruosity"
-                "Suck my fart", "GIT GUD", "Your mom asshole is bigger than your mom pussy", "YOU FUCKER",
-                "You love watching gay dog porn don't you", "Donkey ass niBBa", "Banana sucker", "Jerker nab",
-                "shove your grandma's panties down your own throat", "shut you fucking mouth"]
+                "Suck my fart", "GIT GUD", "Your mom is fat", "YOU FUCKER",
+                "You love watching strange porn", "Donkey ass niBBa", "Banana sucker", "Jerker nab",
+                "shove your grandma's panties down your throat", "shut you fucking mouth"]
     
     x = randint(0, len(offences))
 
