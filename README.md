@@ -28,8 +28,10 @@ This simple discord bot will help and aid in basic features like:
 
   - MODERATION<br>
    Moderation tool that allows an Admin to perform roles and kicks action. To use this functionality, the server creator must create a role named LORD with admin features, and add this role to himself.<br>
+   Set default role: whenever a new user will join your channel, a default role will be assigned. -> $setdefrole 'ROLE NAME' (Note:    everytime your bot will leave your server, you'll need to do that again.<br>
    Addrole: add an existing role to one of the member of the server. -> $addrole @member 'ROLE NAME'<br>
    Removerole: remove an existing role from one of the member of the server. -> $removerole @member 'ROLE NAME'<br>
+   Print roles: want to show everyone how creative you are? print your roles into che channel! -> $printroles<br>
    Kick: the ol' nice kick. Kick someone from the server! -> $kick @someone<br>
   - UTILITY
     Offend people with the command $offence, and take a laugh. -> $offence 'Someone'<br>
