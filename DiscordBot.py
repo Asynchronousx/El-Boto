@@ -79,6 +79,15 @@ async def join(ctx):
 @DiscordBot.command(pass_context=True)
 async def leave(ctx):
     """Let the bot leave the session."""
+    #global calling
+    global voice
+    global voice_channel
+    
+    #setting voice to null
+    voice = None
+    voice_channel = None
+    
+    #leaving
     server = ctx.message.server
     voice_client = DiscordBot.voice_client_in(server)
     await voice_client.disconnect()
