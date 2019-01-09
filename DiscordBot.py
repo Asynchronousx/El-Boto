@@ -1,14 +1,12 @@
 #Bot.py
-import re
-import asyncio
 import discord
-import urllib.parse
 import urllib.request
-from random import randint
-
-#Extern dependencies
+import urllib.parse
+import asyncio
+import re
 import youtube_dl
 from googlesearch import search
+from random import randint
 from discord.ext import commands
 
 #global variables: discord bot
@@ -23,7 +21,7 @@ song_list = []
 DiscordBot = commands.Bot(command_prefix="$")
 
 #generating the token
-TOKEN = 'YOUR TOKEN HERE'
+TOKEN = 'NTE4NzUwMzY0MzYzNzg0MjA3.DxZzNQ.u4Eb5G5Mb5em5IMckxCSxPJ7UbU'
 
 #defining our ready event
 @DiscordBot.event
@@ -72,8 +70,9 @@ async def offence(ctx, *, name):
     """<name>: Make the bot offence someone."""
     offences = ["You suck shit", "Go fuck a pokemon", "You nab scum", "Unfeathered mostruosity"
                 "Suck my fart", "GIT GUD", "Your mom asshole is bigger than your mom pussy", "YOU FUCKER",
-                "You love watching gay dog porn don't you", "Donkey ass", "Banana sucker", "Jerker nab",
-                "shove your grandma's panties", "shut you fucking mouth" ]
+                "You love watching gay dog porn don't you", "Donkey ass niBBa", "Banana sucker", "Jerker nab",
+                "shove your grandma's panties down your own throat", "shut you fucking mouth"]
+    
     x = randint(0, len(offences))
 
     try:
@@ -103,8 +102,14 @@ async def play(ctx, *, songName):
     global voice
     global player
     global song_list
+    
+    #bot is not joined into the channel
+    if not voice:
+        #communicate it and return
+        await DiscordBot.say("You need to `invite` me first to play songs.\nType `$join`!")
+        return
 
-    await DiscordBot.say(":mag_right: Searching the Song.. :mag_right:\n\n")
+    await DiscordBot.say(":mag_right: `Searching the Song..` :mag_right:\n\n")
   
     #fetch the url
     play_url = get_yturl(songName)
@@ -115,7 +120,7 @@ async def play(ctx, *, songName):
         player = await voice.create_ytdl_player(play_url)
 
         #display the video on channel
-        await DiscordBot.say("Song found! :loud_sound: :loud_sound:\n")
+        await DiscordBot.say(":loud_sound: :loud_sound: `Song found!` :loud_sound: :loud_sound:\n")
         await DiscordBot.say(play_url)
         
         #adjust the volume and start
@@ -125,7 +130,7 @@ async def play(ctx, *, songName):
     else:
         #appen the list to queue and notify
         song_list.append(play_url)
-        await DiscordBot.say("Currently playing! :cry: Song added to the queue. :track_next: :track_next: ")
+        await DiscordBot.say("`Currently playing! Song added to the queue.` :track_next: :track_next: ")
 
 #end of play
 
@@ -155,7 +160,7 @@ async def stop(ctx):
         player.stop()
         player = None
     else:
-        await DiscordBot.say("Nothing on play. GIT GUD. :angry:")
+        await DiscordBot.say("`Nothing on play. GIT GUD.` :angry:")
     
 #end of stop
 
@@ -188,7 +193,7 @@ async def skip(ctx):
         dequeued_url = song_list.pop(0)
         
         #notify the client
-        await DiscordBot.say("Song found! :loud_sound: :loud_sound:\n")
+        await DiscordBot.say("`Song found!` :loud_sound: :loud_sound:\n")
         await DiscordBot.say(dequeued_url)
 
         #create and start
@@ -196,7 +201,7 @@ async def skip(ctx):
         player.volume = 0.5
         player.start()
     else:
-        await DiscordBot.say("No song found into the list :back:. For stopping the audio, try !stop :robot: ")
+        await DiscordBot.say("`No song found into the list` :back:. For `stopping` the audio, try $stop :robot: ")
         
 #end skip
 
@@ -211,7 +216,7 @@ async def volume(ctx, volume):
     if player:
         player.volume = int(volume)/100
     else: 
-        await DiscordBot.say("Nothing on play. GIT GUD. :angry:")
+        await DiscordBot.say("`Nothing on play. GIT GUD.` :angry:")
 
 #end volume
 
@@ -226,7 +231,7 @@ async def qstatus(ctx):
     counter = 1
     
     if not song_list:
-        await DiscordBot.say("No song found into the queue. :alien:")
+        await DiscordBot.say("`No song found into the queue.` :alien:")
     else:
         for song in song_list:
             await DiscordBot.say("{}. {}".format(counter, song))
@@ -249,6 +254,12 @@ async def src(ctx, *, message, kind="text"):
 
 #end of gsearch
 
-DiscordBot.run(TOKEN)
+#get info about the creator
+@DiscordBot.command(pass_context=True)
+async def info(ctx):
+    """Get bot credit infos."""
+    await DiscordBot.say(":dollar: `Creator: Asynchronousx#9475` :dollar:\n:dollar: `Current Version: 1.0` :dollar:"); 
+
+#end of info
 
 DiscordBot.run(TOKEN)
