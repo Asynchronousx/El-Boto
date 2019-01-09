@@ -29,4 +29,6 @@ This simple discord bot will help and aid in basic features like:
  - MORE TO COME!<br>
 
 ## Commands and help
-<center>Commands help? type <span style="color:red">$help</span> into Discord.</center>
+
+Commands help? type **$help** into Discord to show the commands table.<br>
+Also, typing **$help <command name>** will show more about a command.
