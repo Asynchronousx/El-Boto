@@ -7,6 +7,11 @@ In approvation on: https://discordbots.org/
 
 [![El Boto](https://bots.ondiscord.xyz/bots/518750364363784207/embed)](https://bots.ondiscord.xyz/bots/518750364363784207)
 
+## Commands and help
+
+Want to know about Commands help? type **$help** into Discord to show the commands table.<br>
+Also, typing **$help 'command name'** will show more about a command.
+
 ## Description
 This Discord Bot is hosted on Heroku via real time cloud to make the bot run 24/7.<br>
 This repo there contains the configuration file and environ necessary to Heroku to let<br> 
@@ -46,11 +51,6 @@ This simple discord bot will help and aid in basic features like:
     Info: get info about the creator (That's me!)-> $info<br>
 
  - ### MORE TO COME!<br>
-
-## Commands and help
-
-Commands help? type **$help** into Discord to show the commands table.<br>
-Also, typing **$help 'command name'** will show more about a command.
 
 ## Dependencies 
 
