@@ -103,6 +103,7 @@ async def removerole(ctx, userName: discord.Member, *, roleName):
 @DiscordBot.command(pass_context=True)
 @commands.has_role("LORD")
 async def setdefrole(ctx, *, roleName):
+    """<role>: Set a default role for new joined server member. This need to be done every time the bot leaves and enter the server."""
     #global calling
     global default_role_to_assign
     default_role_to_assign = roleName
@@ -111,6 +112,7 @@ async def setdefrole(ctx, *, roleName):
  
 @DiscordBot.command(pass_context=True)
 async def printroles(ctx):
+    """Print all the roles in the server."""
     server = ctx.message.server
     counter = 1
     for role in server.roles:
