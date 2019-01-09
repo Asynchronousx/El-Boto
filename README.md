@@ -2,7 +2,7 @@
 
 ## Release
 
-Currently available on: [Bot OnDiscord!](https://bots.ondiscord.xyz/bots/518750364363784207)<br>
+Currently available on: [Bot OnDiscord!](https://bots.ondiscord.xyz/bots/518750364363784207 "El boto!")<br>
 In approvation on: https://discordbots.org/
 
 ## Description
