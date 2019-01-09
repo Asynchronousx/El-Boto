@@ -55,7 +55,12 @@ async def join(ctx):
 
 #end of join 
 
+#kick an user.
+@bot.command(pass_context = True)
+async def kick(ctx, userName: discord.User):
+    await DiscordBot.kick(userName)
 
+#end kick
 
 #adding TEST command to our bot
 @DiscordBot.command(pass_context=True)
