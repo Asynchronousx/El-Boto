@@ -3,7 +3,7 @@
 This simple discord bot will help and aid in basic features like:
 
  - MUSIC
-   Play and search songs from youtube.
+   Play and search songs from youtube.<br>
    Song's queue management (adding songs while one's currently playing will add to the queue)
    Skip song functionality: bored of the songs played by other? $skip it.
    Queue status for checking which song it's actually queued.
