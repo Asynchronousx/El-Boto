@@ -1,16 +1,16 @@
 #Bot.py
-import discord
+from random import randint
 import urllib.request
 import urllib.parse
 import asyncio
 import re
 
-from random import randint
-from discord.ext import commands
 
 #External dependencies
+import discord
 import youtube_dl
 from googlesearch import search
+from discord.ext import commands
 
 #global variables: discord bot
 voice = None
