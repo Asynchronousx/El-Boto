@@ -26,7 +26,7 @@ This simple discord bot will help and aid in basic features like:
    Searching page by name (returns: most-top occurrence)<br>
    Searching a video, returning the most-top occurrence of that video on youtube<br>
 
-  - MODERATION
+  - MODERATION<br>
    Moderation tool that allows an Admin to perform roles and kicks action. To use this functionality, the server creator must create a role named LORD with admin features, and add this role to himself.<br>
    Addrole: add an existing role to one of the member of the server. -> $addrole @member 'ROLE NAME'<br>
    Removerole: remove an existing role from one of the member of the server. -> $removerole @member 'ROLE NAME'<br>
@@ -37,12 +37,7 @@ This simple discord bot will help and aid in basic features like:
     Test Bot: well, you want to check if your bot is alive, don't you? -> $test 'echotest'<br>
     Info: get info about the creator (That's me!)-> $info<br>
 
- - ### MORE TO COME!
-
-
-##### Hope you'll enjoy!
-    
- - MORE TO COME!<br>
+ - ### MORE TO COME!<br>
 
 ## Commands and help
 
