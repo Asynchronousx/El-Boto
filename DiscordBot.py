@@ -21,7 +21,7 @@ song_list = []
 DiscordBot = commands.Bot(command_prefix="$")
 
 #generating the token
-TOKEN = 'NTE4NzUwMzY0MzYzNzg0MjA3.DxZzNQ.u4Eb5G5Mb5em5IMckxCSxPJ7UbU'
+TOKEN = 'YOUR TOKEN HERE'
 
 #defining our ready event
 @DiscordBot.event
