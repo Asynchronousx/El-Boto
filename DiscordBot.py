@@ -11,6 +11,7 @@ import discord
 import youtube_dl
 from googlesearch import search
 from discord.ext import commands
+from discord.utils import get
 
 #global variables: discord bot
 voice = None
@@ -24,7 +25,7 @@ song_list = []
 DiscordBot = commands.Bot(command_prefix="$")
 
 #generating the token
-TOKEN = 'YOUR TOKEN HERE'
+TOKEN = 'NTE4NzUwMzY0MzYzNzg0MjA3.DxZzNQ.u4Eb5G5Mb5em5IMckxCSxPJ7UbU'
 
 #defining our ready event
 @DiscordBot.event
@@ -55,52 +56,39 @@ async def join(ctx):
 
 #end of join 
 
+
+#### MODERATION SECTION ####
+
+#add role to user
+@DiscordBot.command(pass_context=True)
+@commands.has_role("LORD")
+async def addrole(ctx, userName: discord.Member, *, roleName):
+    """<user> <role>: Add a role to an user."""
+    author = ctx.message.author
+    role = get(author.server.roles, name=roleName)
+    await DiscordBot.add_roles(userName, role)
+    
+#end addrole
+
+#remove role from user
+@DiscordBot.command(pass_context=True)
+@commands.has_role("LORD")
+async def removerole(ctx, userName: discord.Member, *, roleName):
+    """<user> <role>: Remove a role from an user."""
+    author = ctx.message.author
+    role =  get(author.server.roles, name=roleName)
+    await DiscordBot.remove_roles(userName, role)
+
 #kick an user.
-@bot.command(pass_context = True)
+@DiscordBot.command(pass_context = True)
+@commands.has_role("LORD")
 async def kick(ctx, userName: discord.User):
+    """<user>: Kick an user from the server."""
     await DiscordBot.kick(userName)
 
 #end kick
 
-#adding TEST command to our bot
-@DiscordBot.command(pass_context=True)
-async def test(ctx, *, message):
-    """<echo argument>: Test the bot."""
-    try:
-        await DiscordBot.say("This is a ECHO test: {} from: {}".format(message, ctx.message.author))
-    except:
-        await DiscordBot.say("Missing echoing argument.")
-#end test
-
-#adding OFFENCE command to our bot
-@DiscordBot.command(pass_context=True)
-async def offence(ctx, *, name):
-    """<name>: Make the bot offence someone."""
-    offences = ["You suck shit", "Go fuck a pokemon", "You nab scum", "Unfeathered mostruosity"
-                "Suck my fart", "GIT GUD", "Your mom is fat", "YOU FUCKER",
-                "You love watching strange porn", "Donkey ass niBBa", "Banana sucker", "Jerker nab",
-                "shove your grandma's panties down your throat", "shut you fucking mouth"]
-    
-    x = randint(0, len(offences))
-
-    try:
-        await DiscordBot.say("{}, {}".format(offences[x], name))
-    except:
-        await DiscordBot.say("Missing name argument.")
-
-#end offence
-
-@DiscordBot.command(pass_context=True)
-async def droll(ctx, limit=None):
-    """Make a dice roll (1-6). Passing a number change num limit."""
-    if not limit:
-        x = randint(1, 6)
-    else: 
-        x = randint(1, int(limit))
-
-    await DiscordBot.say("You rolled: {} :game_die:".format(x))
-
-#end droll
+#### MUSIC SECTION ####
 
 #adding PLAY song functionality
 @DiscordBot.command(pass_context=True)
@@ -216,7 +204,7 @@ async def skip(ctx):
 #adding VOLUME functionality to our bot
 @DiscordBot.command(pass_context=True)
 async def volume(ctx, volume):
-    """Adjust current playing song volume."""
+    """<volume number>: Adjust current song's volume."""
 
     #global calling
     global player
@@ -247,10 +235,12 @@ async def qstatus(ctx):
 
 #end qstatus
 
+#### SEARCHING SECTION ####
+
 #adding GOOGLE search to our bot
 @DiscordBot.command(pass_context=True)
 async def src(ctx, *, message, kind="text"):
-    """<name>, <kind>: Get google search info: kind is text by default, change to video to obtain video."""
+    """<name> <kind>: Get Google page. <kind=text> or <kind=video>. Text default."""
     #search for the selected object
     if kind == "text":
         for url in search(message):
@@ -261,6 +251,48 @@ async def src(ctx, *, message, kind="text"):
         await DiscordBot.say(url)
 
 #end of gsearch
+
+#### UTILITIES SECTION ####
+
+#adding TEST command to our bot
+@DiscordBot.command(pass_context=True)
+async def test(ctx, *, message):
+    """<echo argument>: Test the bot."""
+    try:
+        await DiscordBot.say("This is a ECHO test: {} from: {}".format(message, ctx.message.author))
+    except:
+        await DiscordBot.say("Missing echoing argument.")
+#end test
+
+#adding OFFENCE command to our bot
+@DiscordBot.command(pass_context=True)
+async def offence(ctx, *, name):
+    """<name>: Make the bot offence someone."""
+    offences = ["You suck shit", "Go fuck a pokemon", "You nab scum", "Unfeathered mostruosity"
+                "Suck my fart", "GIT GUD", "Your mom asshole is bigger than your mom pussy", "YOU FUCKER",
+                "You love watching gay dog porn don't you", "Donkey ass niBBa", "Banana sucker", "Jerker nab",
+                "shove your grandma's panties down your own throat", "shut you fucking mouth"]
+    
+    x = randint(0, len(offences))
+
+    try:
+        await DiscordBot.say("{}, {}".format(offences[x], name))
+    except:
+        await DiscordBot.say("Missing name argument.")
+
+#end offence
+
+@DiscordBot.command(pass_context=True)
+async def droll(ctx, limit=None):
+    """Make a dice roll (1-6). Passing a number change num limit."""
+    if not limit:
+        x = randint(1, 6)
+    else: 
+        x = randint(1, int(limit))
+
+    await DiscordBot.say("You rolled: {} :game_die:".format(x))
+
+#end droll
 
 #get info about the creator
 @DiscordBot.command(pass_context=True)
