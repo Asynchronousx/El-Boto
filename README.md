@@ -1,4 +1,10 @@
 # Discord-Bot: a fun, useful utility to Discord.
+
+## Release
+
+Currently available on: [Bot OnDiscord!](https://bots.ondiscord.xyz/bots/518750364363784207)
+In approvation on: https://discordbots.org/
+
 ## Description
 This Discord Bot is hosted on Heroku via real time cloud to make the bot run 24/7.<br>
 This repo there contains the configuration file and environ necessary to Heroku to let<br> 
