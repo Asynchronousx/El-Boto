@@ -13,18 +13,18 @@ the bot work properly.<br>
 This simple discord bot will help and aid in basic features like:
 
  - MUSIC<br>
-   Play and search songs from youtube<br>
+   Play and search songs from youtube: -> $play 'songname'<br>
    Song's queue management (adding songs while one's currently playing will add to the queue)<br>
-   Skip song functionality: bored of the songs played by other? $skip it<br>
-   Queue status for checking which song it's actually queued<br>
-   Stop function to make the player stop playing<br>
-   Volume adjust function to adjust the volume<br>
+   Skip song functionality: bored of the songs played by other? skip it! -> $skip<br>
+   Queue status for checking which song it's actually queued -> $qstatus<br>
+   Stop function to make the player stop playing -> $stop<br>
+   Volume adjust function to adjust the volume -> $volume 'volume number'<br>
 
  - SEARCHING<br>
    Why open a browser when you comfortably do this on your discord channel?<br>
    Searching features include(TEXT PAGE by default):<br>
-   Searching page by name (returns: most-top occurrence)<br>
-   Searching a video, returning the most-top occurrence of that video on youtube<br>
+   Searching page by name (returns: most-top occurrence) -> $src 'something'<br>
+   Searching a video, returning the most-top occurrence of that video on youtube -> $src 'something 'video'<br>
 
   - MODERATION<br>
    Moderation tool that allows an Admin to perform roles and kicks action. To use this functionality, the server creator must create a role named LORD with admin features, and add this role to himself.<br>
