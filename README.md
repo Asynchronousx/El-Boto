@@ -14,6 +14,10 @@ the bot work properly.<br>
 
 This simple discord bot will help and aid in basic features like:
 
+ - BOT BASICS
+   Join: simple as it seems: make the bot join the channel. -> $join<br>
+   Leave: you won't believe: make the bot leave the channel. -> $leave<br>
+
  - MUSIC<br>
    Play and search songs from youtube: -> $play 'songname'<br>
    Song's queue management (adding songs while one's currently playing will add to the queue)<br>
