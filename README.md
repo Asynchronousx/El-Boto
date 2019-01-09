@@ -69,5 +69,8 @@ If you'd like to compile ant test it locally, you'll need this the following dep
  ```
  into your terminal to make the bot starting his job.
  
- Alternatively you can deploy this bot on heroky, forking this repo and change the token with yours.<br>
- Dependencies buildpacks on Heroku: Python, FFMEPG, AWS APT.
+ Alternatively you can deploy this bot on Heroku, forking this repo and change the token with yours.<br>
+ **Dependencies buildpacks on Heroku:**
+ - Python 
+ - heroku-buildpack-ffmpeg-latest.
+ - AWS APT (heroku-community/apt).
