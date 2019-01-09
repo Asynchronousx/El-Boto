@@ -53,7 +53,7 @@ async def on_member_join(member):
 
 #end on join event
 
-#### JOIN COMMAND ####
+#### JOIN AND LEAVE COMMAND ####
 
 #defining the command JOIN: this command must be ran before every other action.
 @DiscordBot.command(pass_context=True)
@@ -75,6 +75,15 @@ async def join(ctx):
 
 #end of join 
 
+#make bot leave the channel.
+@DiscordBot.command(pass_context=True)
+async def leave(ctx):
+    """Let the bot leave the session."""
+    server = ctx.message.server
+    voice_client = DiscordBot.voice_client_in(server)
+    await voice_client.disconnect()
+
+#end of leave
 
 #### MODERATION SECTION ####
 
@@ -103,7 +112,7 @@ async def removerole(ctx, userName: discord.Member, *, roleName):
 @DiscordBot.command(pass_context=True)
 @commands.has_role("LORD")
 async def setdefrole(ctx, *, roleName):
-    """<role>: Set a default role for new joined server member. This need to be done every time the bot leaves and enter the server."""
+    """<role>: Set a default role for newcomers in the server."""
     #global calling
     global default_role_to_assign
     default_role_to_assign = roleName
@@ -112,12 +121,13 @@ async def setdefrole(ctx, *, roleName):
  
 @DiscordBot.command(pass_context=True)
 async def printroles(ctx):
-    """Print all the roles in the server."""
+    """Print all the current defined roles in the server."""
     server = ctx.message.server
-    counter = 1
+    roles_list =  []
     for role in server.roles:
-        await DiscordBot.say("`{}. {}` :hammer_pick:".format(counter, role.name))
-        counter += 1
+        roles_list.append("`" + role.name + "`" + " :hammer_pick:")
+    
+    await DiscordBot.say("\n".join(roles_list))
    
 #end of display role
     
@@ -341,7 +351,7 @@ async def droll(ctx, limit=None):
 @DiscordBot.command(pass_context=True)
 async def info(ctx):
     """Get bot credit infos."""
-    await DiscordBot.say(":dollar: `Creator: Asynchronousx#9475` :dollar:\n:dollar: `Current Version: 1.0` :dollar:"); 
+    await DiscordBot.say(":dollar: `Creator: Asynchronousx#9475` :dollar:\n:dollar: `Current Version: 1.0` :dollar:\n:dollar: Github: https://github.com/Asynchronousx :dollar:"); 
 
 #end of info
 
