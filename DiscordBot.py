@@ -5,13 +5,12 @@ import urllib.parse
 import asyncio
 import re
 
-
 #External dependencies
 import discord
 import youtube_dl
+from discord.utils import get
 from googlesearch import search
 from discord.ext import commands
-from discord.utils import get
 
 #global variables: discord bot
 voice = None
@@ -20,12 +19,16 @@ voice_channel = None
 
 #global variables: useful var
 song_list = []
+default_role_to_assign = None
 
 #creating the bot istance
 DiscordBot = commands.Bot(command_prefix="$")
 
 #generating the token
-TOKEN = 'YOUR TOKEN HERE'
+TOKEN = 'NTE4NzUwMzY0MzYzNzg0MjA3.DxZzNQ.u4Eb5G5Mb5em5IMckxCSxPJ7UbU'
+
+
+#### EVENT HANDLING ####
 
 #defining our ready event
 @DiscordBot.event
@@ -34,9 +37,25 @@ async def on_ready():
     print(DiscordBot.user.name)
     print(DiscordBot.user.id)
     print("-----")
-#end on ready
+#end on ready event
 
-#defining the command INIT: this command must be ran before every other action.
+@DiscordBot.event
+async def on_member_join(member):
+    #global calling
+    global default_role_to_assign;
+
+    #if a default role is not assigned
+    if not default_role_to_assign:
+        return
+
+    role = get(member.server.roles, name=default_role_to_assign)
+    await DiscordBot.add_roles(member, role)
+
+#end on join event
+
+#### JOIN COMMAND ####
+
+#defining the command JOIN: this command must be ran before every other action.
 @DiscordBot.command(pass_context=True)
 async def join(ctx):
     """Let the bot join the session."""
@@ -76,9 +95,30 @@ async def addrole(ctx, userName: discord.Member, *, roleName):
 async def removerole(ctx, userName: discord.Member, *, roleName):
     """<user> <role>: Remove a role from an user."""
     author = ctx.message.author
-    role =  get(author.server.roles, name=roleName)
+    role = get(author.server.roles, name=roleName)
     await DiscordBot.remove_roles(userName, role)
 
+    
+#add default role on member join
+@DiscordBot.command(pass_context=True)
+@commands.has_role("LORD")
+async def setdefrole(ctx, *, roleName):
+    #global calling
+    global default_role_to_assign
+    default_role_to_assign = roleName
+        
+#end of default role assigning
+ 
+@DiscordBot.command(pass_context=True)
+async def printroles(ctx):
+    server = ctx.message.server
+    counter = 1
+    for role in server.roles:
+        await DiscordBot.say("`{}. {}` :hammer_pick:".format(counter, roles))
+   
+#end of display role
+    
+    
 #kick an user.
 @DiscordBot.command(pass_context = True)
 @commands.has_role("LORD")
