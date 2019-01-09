@@ -43,4 +43,14 @@ This bot requires internal and external dependencies in order to work.<br>
 If you'd like to compile ant test it locally, you'll need this the following dependencies:
 
  ### Runtime enviroinment: 
- **Python 3.6.7**
+ -**Python 3.6.7**
+
+ ### Internal Dependencies:
+ -**discord.py lib**
+ -**youtube_dl lib**
+ -**google - specifically googlesearch- lib**
+ 
+ ### External Dependencies
+ -**PyNaCL**
+ -**FFMPEG/AVCONV to make the bot translate and play youtube audio into the channel**
+ 
