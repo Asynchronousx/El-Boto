@@ -54,12 +54,20 @@ If you'd like to compile ant test it locally, you'll need this the following dep
  -**PyNaCL**<br>
  -**FFMPEG/AVCONV to make the bot translate and play youtube audio into the channel**<br>
  
+ ### Token
+ - Also, don't forget to change the occurrence 'YOUR TOKEN' into the DiscordBot.py file with the token of your bot (available once you created your new bot and went into developer section to check it).
+ 
  ## Installation
  
  For installing and running this bot in local, make sure to have all the dependencies listed there, and then download
  the DiscordBot.py.<br>
  Once done, type 
+ 
  ```bash
+ cd /path/to/bot
  python DiscordBot.py 
  ```
+ into your terminal to make the bot starting his job.
  
+ Alternatively you can deploy this bot on heroky, forking this repo and change the token with yours.<br>
+ Dependencies buildpacks on Heroku: Python, FFMEPG, AWS APT.
