@@ -16,6 +16,7 @@ from discord.ext import commands
 voice = None
 player = None
 voice_channel = None
+is_paused = False
 
 #global variables: useful var
 song_list = []
@@ -192,7 +193,42 @@ async def play(ctx, *, songName):
 
 #end of play
 
-#end of play
+#add pause function to our bot
+@DiscordBot.command(pass_context=True)
+async def pause(ctx):
+    #global calling
+    global player
+    global is_paused
+    
+    if player and player.is_playing():
+        player.pause()
+        is_paused = True
+        await DiscordBot.say("`Song paused!` :sound: :sound:")
+    else:
+        await DiscordBot.say("`Nothing on play. GIT GUD.` :angry:")
+
+#end of pause
+
+@DiscordBot.command(pass_context=True)
+async def resume(ctx):
+    #global calling
+    global player
+    global is_paused
+    
+    if player and is_paused:
+        player.resume()
+        is_paused = False
+        await DiscordBot.say("`Song resumed!` :loud_sound: :loud_sound:")
+    else:
+        if not player:
+            await DiscordBot.say("`Nothing on play. GIT GUD.` :angry:")
+        else: 
+            await DiscordBot.say("`Nothing on pause. GIT GUD.` :angry:")
+            
+    
+#end resume
+    
+
 
 def next_song(ctx, *, songName):
     #global calling
