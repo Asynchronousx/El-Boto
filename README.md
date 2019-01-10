@@ -1,4 +1,4 @@
-# Discord-Bot: a fun, useful utility to Discord.
+# El Boto: a fun, useful Discord Bot full of utilities and more.
 
 ## Release
 
