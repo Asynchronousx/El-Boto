@@ -30,6 +30,7 @@ This simple discord bot will help and aid in basic features like:
    Skip song functionality: bored of the songs played by other? skip it! -> $skip<br>
    Queue status for checking which song it's actually queued -> $qstatus<br>
    Stop function to make the player stop playing -> $stop<br>
+   Pause and resume function: they do what you expect. -> $pause // $resume <br>
    Volume adjust function to adjust the volume -> $volume 'volume number'<br>
 
  - SEARCHING<br>
