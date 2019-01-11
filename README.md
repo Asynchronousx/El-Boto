@@ -37,7 +37,7 @@ This simple discord bot will help and aid in basic features like:
    Why open a browser when you comfortably do this on your discord channel?<br>
    Searching features include(TEXT PAGE by default):<br>
    Searching page by name (returns: most-top occurrence) -> $src 'something'<br>
-   Searching a video, returning the most-top occurrence of that video on youtube -> $src 'something 'video'<br>
+   Searching a video, returning the most-top occurrence of that video on youtube -> $srcvideo 'something'<br>
 
   - MODERATION<br>
    Moderation tool that allows an Admin to perform roles and kicks action. To use this functionality, the server creator must create a role named LORD with admin features, and add this role to himself.<br>
