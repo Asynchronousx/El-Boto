@@ -2,8 +2,10 @@
 
 ## Release
 
-Currently available on: [Bot OnDiscord!](https://bots.ondiscord.xyz/bots/518750364363784207 "El boto!")<br>
-Approved on Discordbots: https://discordbots.org/bot/518750364363784207
+Currently available on: 
+[Bot OnDiscord!](https://bots.ondiscord.xyz/bots/518750364363784207 "El boto!")<br>
+[Discordbots!](https://discordbots.org/bot/518750364363784207 "El boto!")<br>
+Approved on Discordbots: 
 
 [![Discord Bots](https://discordbots.org/api/widget/518750364363784207.svg)](https://discordbots.org/bot/518750364363784207)<br>
 [![El Boto](https://bots.ondiscord.xyz/bots/518750364363784207/embed)](https://bots.ondiscord.xyz/bots/518750364363784207)<br>
