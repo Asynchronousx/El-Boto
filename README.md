@@ -7,7 +7,7 @@ Currently available on: <br>
 [![El Boto](https://bots.ondiscord.xyz/bots/518750364363784207/embed)](https://bots.ondiscord.xyz/bots/518750364363784207)<br>
 
 [Discordbots!](https://discordbots.org/bot/518750364363784207 "El boto!")<br>
-[![Discord Bots](https://discordbots.org/api/widget/518750364363784207.svg)](https://discordbots.org/bot/518750364363784207)<br>
+[![Discord Bots](https://discordbots.org/api/widget/518750364363784207.svg)](https://discordbots.org/bot/518750364363784207) <br>
 
 
 ## Commands and help
